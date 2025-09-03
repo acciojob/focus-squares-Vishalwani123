@@ -2,19 +2,17 @@
 const squares = document.querySelectorAll('.square');
 
 squares.forEach((square, index) => {
-    square.addEventListener('mouseenter', () => {
+    square.addEventListener('mouseover', () => {
         squares.forEach((sq, i) => {
             if (i !== index) {
-                sq.style.backgroundColor = '#6F4E37';
+                sq.style.backgroundColor = 'rgb(111, 78, 55)';
             }
         });
     });
 
-    square.addEventListener('mouseleave', () => {
-		squares.forEach((sq, i) => {
-            if (i !== index) {
-                sq.style.backgroundColor = '#E6E6FA';
-            }
+    square.addEventListener('mouseout', () => {
+		squares.forEach((sq) => {
+            sq.style.backgroundColor = 'rgb(230, 230, 250)';
         });
     });
 });
